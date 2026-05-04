@@ -241,7 +241,7 @@ Dibuat sebagai solusi digital untuk memudahkan pengelolaan bisnis kost secara mo
 
 📄 Lisensi
 Copyright © 2025 — All Rights Reserved.
-Aplikasi ini merupakan produk digital komersial yang dilindungi hak cipta. Penggunaan, distribusi, modifikasi, atau reproduksi dalam bentuk apapun tanpa izin tertulis dari pemilik adalah dilarang.
+Aplikasi ini merupakan produk digital komersial dari Bicara Digital yang dilindungi hak cipta. Penggunaan, distribusi, modifikasi, atau reproduksi dalam bentuk apapun tanpa izin tertulis dari pemilik adalah dilarang.
 ❌ Yang TIDAK diperbolehkan:
 
 Menyalin, mendistribusikan, atau menjual ulang kode ini
