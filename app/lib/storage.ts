@@ -72,6 +72,7 @@ export interface FinancialCategory {
 
 export interface Settings {
   kosName: string
+  manager?: string
   address: string
   phone: string
   email: string

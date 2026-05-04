@@ -33,6 +33,7 @@ import TenantForm from "./components/forms/TenantForm"
 import PaymentForm from "./components/forms/PaymentForm"
 import FinancialForm from "./components/forms/FinancialForm"
 import WhatsAppSettings from "./components/forms/WhatsAppSettings"
+import KosInformationForm from "./components/forms/KosInformationForm"
 import ReminderManager from "./components/ReminderManager"
 import SecuritySettings from "./components/SecuritySettings"
 import NavigationTabs from "./components/NavigationTabs" // Import NavigationTabs
@@ -189,11 +190,20 @@ export default function KostManagement() {
                 </Button>
               </DialogTrigger>
               <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto">
-                <Tabs defaultValue="whatsapp" className="space-y-6">
-                  <TabsList className="grid w-full grid-cols-2">
+                <Tabs defaultValue="kos-info" className="space-y-6">
+                  <TabsList className="grid w-full grid-cols-3">
+                    <TabsTrigger value="kos-info">Informasi Kos</TabsTrigger>
                     <TabsTrigger value="whatsapp">WhatsApp</TabsTrigger>
                     <TabsTrigger value="security">Keamanan</TabsTrigger>
                   </TabsList>
+                  <TabsContent value="kos-info">
+                    <KosInformationForm
+                      settings={settings}
+                      onSave={(newSettings) => {
+                        updateSettings(newSettings)
+                      }}
+                    />
+                  </TabsContent>
                   <TabsContent value="whatsapp">
                     <WhatsAppSettings
                       settings={settings}
@@ -230,7 +240,14 @@ export default function KostManagement() {
               <div className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 rounded-2xl p-4 sm:p-8 text-white shadow-xl">
                 <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 sm:gap-6">
                   <div className="w-full lg:flex-1">
-                    <h1 className="text-2xl sm:text-3xl font-bold mb-2">Selamat Datang! 👋</h1>
+                    <div className="flex items-center gap-2 mb-2">
+                      <h1 className="text-2xl sm:text-3xl font-bold">
+                        {settings.kosName ? `Selamat Datang di ${settings.kosName}! 👋` : "Selamat Datang! 👋"}
+                      </h1>
+                    </div>
+                    {settings.manager && (
+                      <p className="text-xs sm:text-sm text-blue-200 mb-2">Penanggungjawab: {settings.manager}</p>
+                    )}
                     <p className="text-sm sm:text-lg text-blue-100">Kelola kost Anda dengan mudah dan efisien</p>
                     <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mt-3 sm:mt-4">
                       <div className="flex items-center gap-2">
