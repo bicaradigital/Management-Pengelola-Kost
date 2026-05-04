@@ -258,8 +258,8 @@ Mendapatkan update dan dukungan teknis dari developer
 💼 Pembelian Lisensi & Informasi Lebih Lanjut
 Untuk pembelian lisensi, kustomisasi, atau pertanyaan bisnis:
 
-📧 Email: tambahkan email kamu
-💬 WhatsApp: tambahkan nomor WhatsApp kamu
+> 💬 **Bicara Digital**
+> _https://wa.me/6282133467984_
 
 
 ⚠️ Pelanggaran terhadap ketentuan lisensi ini dapat dikenakan tindakan hukum sesuai peraturan perundang-undangan yang berlaku.
